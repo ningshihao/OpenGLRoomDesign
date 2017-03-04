@@ -11,7 +11,7 @@ struct vertex {
 struct texture {
     GLuint;
     string type;
-}
+};
 
 class Mesh {
     private:
@@ -21,6 +21,6 @@ class Mesh {
         vector<vertex> vertices;
         vector<GLuint> indices;
         vector<texture> textures;
-        Mesh(vector<vertex> vertices, vector<GLuint> indices, vector<texture> textures);
+        Mesh(vector<vertex> v, vector<GLuint> i, vector<texture> t): vertices(v), indices(i), textures(t) {};
         void draw(Shader shader);
 };
